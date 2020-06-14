@@ -1,0 +1,39 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css_design/background/background.css' %}">
+{% block content %}
+
+<style>
+div {
+  background-color:white;
+  text-align: center;
+  margin:80px auto;
+  width: 900px;
+  padding: 60px;
+
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+} 
+</style>
+<div >
+<table style="width:100%">
+    <tr>
+        <th style="text-align:left">Pet name</th>
+        <th style="text-align:left">Pet owner</th>
+        <th style="text-align:left">Pet species</th>
+        <th style="text-align:left">Pet description</th>
+    </tr>
+    <tr>
+        <th style="text-align:left">{{animal.name}}</th>
+        <img src="{{animal.photo.url}}">
+        <th style="text-align:left">{{animal.owner}}</th>
+        <th style="text-align:left">{{animal.species}}</th>
+        <th style="text-align:left">{{animal.description}}</th>
+    </tr>
+</table>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css_design/background/background.css' %}">
+{% block content %}
+
+<style>
+div {
+  background-color:white;
+  text-align: center;
+  margin:80px auto;
+  width: 900px;
+  padding: 160px;
+
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+} 
+</style>
+<div >
+    <h2>All the information for the procedures you've made.</h2>
+<table >
+    <tr>
+        <th style="text-align:left">Procedure</th>
+        <th style="text-align:left">Pet of procedure</th>
+        <th style="text-align:left">Pet owner</th>
+        <th style="text-align:left">Procedure description</th>
+        <th style="text-align:left">Procedure start date</th>
+        <th style="text-align:left">Procedure end date</th>
+        <th style="text-align:left">Additional information</th>
+    </tr>
+    <tr>
+        <th style="text-align:left">{{procedure.name}}</th>
+        <th style="text-align:left">{{procedure.animal_name}}</th>
+        <th style="text-align:left">{{procedure.owner}}</th>
+        <th style="text-align:left">{{procedure.description}}</th>
+        <th style="text-align:left">{{procedure.start_date}}</th>
+        <th style="text-align:left">{{procedure.end_date}}</th>
+        <th style="text-align:left">{{procedure.information}}</th>
+    </tr>
+</table>
+</div>
+{% endblock %}
